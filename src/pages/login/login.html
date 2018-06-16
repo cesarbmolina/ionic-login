@@ -17,8 +17,8 @@
       <ion-input type="password" clearOnEdit="false" formControlName="password"></ion-input>
     </ion-item>
     <ion-row>
-      <ion-col col-12 padding text-center ion-text color="danger" *ngIf="errorAuth">
-         Email o Contraseña incorrectos
+      <ion-col col-12 padding text-center ion-text color="danger" *ngIf="loginError">
+        Email o Contraseña incorrectos
       </ion-col>
     </ion-row>
 
@@ -29,7 +29,13 @@
       </ion-col>
       <ion-col col-2></ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col padding text-center (click)="signup()">
+        <p>Registrar</p>
+      </ion-col>
+    </ion-row>
   </form>
+
 
 
 </ion-content>

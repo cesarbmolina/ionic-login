@@ -1,0 +1,30 @@
+<ion-content padding>
+  <form (ngSubmit)="signup()" [formGroup]="form">
+    <ion-item>
+      <ion-label color="dark" floating>EMAIL</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" floating>Constraseña</ion-label>
+      <ion-input type="password" formControlName="password" clearOnEdit="false"></ion-input>
+    </ion-item>
+    <div padding-horizontal>
+      <div class="form-error" *ngIf="signupError" text-center>
+        <p color="danger">Este email ya ha sido registrado</p>
+
+      </div>
+
+      <button margin-top ion-button round block outline color="dark" type="submit" [disabled]="!form.valid">Registrar</button>
+    </div>
+
+    <ion-row>
+      <ion-col padding text-center (click)="backToLogin()">
+        Ya tengo cuenta
+        <b>Ingresar</b>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+
+</ion-content>
