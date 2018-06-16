@@ -22,7 +22,19 @@ export class AuthService {
     return this.afAuth.auth.createUserWithEmailAndPassword(credentials.email, credentials.password);
   }
 
+  signOut(): Promise<void> {
+    return this.afAuth.auth.signOut();
+  }
+
   resetPass(credentials) {
     return this.afAuth.auth.sendPasswordResetEmail(credentials.email);
+  }
+
+  get authenticated(): boolean {
+    return this.user !== null;
+  }
+
+  getEmail() {
+    return this.user && this.user.email;
   }
 }
