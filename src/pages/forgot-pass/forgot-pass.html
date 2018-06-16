@@ -1,0 +1,25 @@
+<ion-content padding>
+  <form (ngSubmit)="forgotPass()" [formGroup]="formForgot">
+    <ion-item>
+      <ion-label color="dark" floating>EMAIL</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <div padding-horizontal>
+      <div *ngIf="messages" padding-top>
+        Le ha sido enviado un correo de recuperacion de contraseña
+      </div>
+
+      <button margin-top ion-button round block outline color="dark" type="submit" [disabled]="!formForgot.valid">Registrar</button>
+    </div>
+
+    <ion-row>
+      <ion-col padding text-center (click)="backToLogin()">
+        Volver al
+        <b>Inicio de sesion</b>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+
+</ion-content>

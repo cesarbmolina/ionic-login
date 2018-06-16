@@ -21,4 +21,8 @@ export class AuthService {
   signUp(credentials) {
     return this.afAuth.auth.createUserWithEmailAndPassword(credentials.email, credentials.password);
   }
+
+  resetPass(credentials) {
+    return this.afAuth.auth.sendPasswordResetEmail(credentials.email);
+  }
 }
