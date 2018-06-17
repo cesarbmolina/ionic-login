@@ -1,11 +1,10 @@
 # ionic-login
 test firebase
 
-Integraccion de lottiefile para animacion del login
-Integrando Firebase para pruebas de conceptos
-Intregacion de login
-integracion de SingUp
-integracion de forgot pass
+Integraccion de lottiefile para animacion del login <br>
+Intregacion de login<br>
+integracion de SingUp<br>
+integracion de forgot pass<br>
 
 <pre>
 <code>
